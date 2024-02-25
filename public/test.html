@@ -1,0 +1,80 @@
+<!-- HTML for the page -->
+<body>
+  <div class="grid">
+    <!-- Header element -->
+    <div class="header">
+      <h1>My Page</h1>
+      <button class="menu-button">
+        <img src="burger-icon.png" alt="Menu" />
+      </button>
+    </div>
+
+    <!-- Menu element -->
+    <div class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+<!-- CSS for the page -->
+<style>
+  /* Define the grid container */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+  }
+
+  /* Position the header element at the top of the grid */
+  .header {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  /* Position the menu element below the header */
+  .menu {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /* Style the menu button and burger icon */
+  .menu-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .menu-button img {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Style the menu element */
+  .menu {
+    background: #333;
+    color: #fff;
+    display: none;
+  }
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .menu li {
+    padding: 8px 16px;
+  }
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* Show the menu when the menu button is clicked */
+  .menu-button:active ~ .menu,
+  .menu-button:focus ~ .menu {
+    display: block;
+  }
+</style>
